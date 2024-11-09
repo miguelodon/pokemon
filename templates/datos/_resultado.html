@@ -1,0 +1,44 @@
+{% if pokemon %}
+    <div class="pokemon-card">
+        <h2 class="pokemon-name">{{ pokemon.name.capitalize() }}</h2>
+        <img src="{{ pokemon.sprites.front_default }}" alt="{{ pokemon.name }}" class="pokemon-image">
+        
+        <div class="pokemon-details">
+            <p><strong>Tipos:</strong> 
+                {{ pokemon.tipos | join(', ') }}
+            </p>
+            <p><strong>Habilidades:</strong> 
+                {% if pokemon.habilidades %}
+                    {{ pokemon.habilidades | join(', ') }}
+                {% else %}
+                    Ninguna
+                {% endif %}
+            </p>
+            <p><strong>Altura:</strong> {{ pokemon.altura }} metros</p>
+            <p><strong>Peso:</strong> {{ pokemon.peso }} kilogramos</p>
+            <p><strong>Debilidades:</strong> 
+                {% if pokemon.debilidades %}
+                    {{ pokemon.debilidades | join(', ') }}
+                {% else %}
+                    Ninguna
+                {% endif %}
+            </p>
+            <p><strong>Fortalezas:</strong> 
+                {% if pokemon.fortalezas %}
+                    {{ pokemon.fortalezas | join(', ') }}
+                {% else %}
+                    Ninguna
+                {% endif %}
+            </p>
+            <p><strong>Inmunidades:</strong> 
+                {% if pokemon.inmunidades %}
+                    {{ pokemon.inmunidades | join(', ') }}
+                {% else %}
+                    Ninguna
+                {% endif %}
+            </p>
+        </div>
+    </div>
+{% else %}
+    <p>No se encontró ningún Pokémon con ese nombre.</p>
+{% endif %}

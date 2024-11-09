@@ -1,0 +1,14 @@
+<h1>Pokédex</h1>
+    <form id="pokemon-form" action="/pokemon" method="get" class="search-form">
+        <input type="text" name="name" placeholder="Ingresa el nombre del Pokémon" required>
+        <button type="submit">Buscar</button>
+    </form>
+
+    <div id="pokemon-result">
+
+    </div>
+
+    <!-- Incluir jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Incluir el archivo de scripts -->
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>

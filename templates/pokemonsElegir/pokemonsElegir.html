@@ -1,0 +1,14 @@
+ <h2>Elige tu Pokémon</h2>
+    <form id="pokemon-select-form" action="/pokemonsElegir" method="get">
+        <input type="text" name="name" placeholder="Ingresa el nombre del Pokémon" required>
+        <button type="submit">Buscar</button>
+    </form>
+    
+    <div id="pokemon-result-elegir">
+        <!-- Aquí se mostrarán los resultados -->
+    </div>
+
+<!-- Incluir jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Incluir el archivo de scripts -->
+<script src="{{ url_for('static', filename='js/scriptsElegir.js') }}"></script>

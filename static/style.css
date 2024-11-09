@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-image: url('https://static.vecteezy.com/system/resources/previews/024/649/105/non_2x/pattern-pokeball-red-and-white-ball-of-the-popular-cartoon-90s-pixel-art-free-vector.jpg');
+    background-size: 580px; /* Tamaño de la imagen de fondo aumentado a 580px */
+    background-repeat: repeat; /* Repetir la imagen de fondo */
+    background-position: center; /* Centrar la imagen */
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con opacidad para que se vea la imagen de fondo */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.search-form {
+    margin-bottom: 30px;
+}
+
+.search-form input {
+    padding: 10px;
+    font-size: 1em;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    width: 60%;
+    max-width: 400px;
+}
+
+.search-form button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.search-form button:hover {
+    background-color: #0056b3;
+}
+
+.pokemon-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.pokemon-name {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.pokemon-image {
+    width: 150px;
+    height: 150px;
+}
+
+.pokemon-details {
+    margin-top: 15px;
+    text-align: left;
+}
+
+.pokemon-details p {
+    margin: 5px 0;
+    font-size: 1.1em;
+}
+
+/* Estilos para la tabla de resultados */
+#pokemonTable {
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#pokemonTable th, #pokemonTable td {
+    border: 1px solid #007bff;
+    padding: 10px;
+    text-align: center;
+}
+
+#pokemonTable th {
+    background-color: #007bff;
+    color: white;
+}
+
+#pokemonTable img {
+    width: 100px; /* Ajusta el tamaño de la imagen en la tabla */
+    height: auto; /* Mantiene la proporción de la imagen */
+}

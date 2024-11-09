@@ -1,0 +1,59 @@
+<h3>Resultados:</h3>
+<table id="pokemon-table">
+    <thead>
+        <tr>
+            <th>Imagen</th>
+            <th>Nombre</th>
+            <th>Tipos</th>
+            <th>Habilidades</th>
+            <th>Altura</th>
+            <th>Peso</th>
+            <th>Debilidades</th>
+            <th>Fortalezas</th>
+            <th>Inmunidades</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% if pokemonElegir %}
+            <tr>
+                <td><img src="{{ pokemonElegir.sprites.front_default }}" alt="{{ pokemonElegir.name.capitalize() }}" /></td>
+                <td>{{ pokemonElegir.name.capitalize() }}</td>
+                <td>{{ pokemonElegir.tipos | join(', ') }}</td>
+                <td>
+                    {% if pokemonElegir.habilidades %}
+                        {{ pokemonElegir.habilidades | join(', ') }}
+                    {% else %}
+                        Ninguna
+                    {% endif %}
+                </td>
+                <td>{{ pokemonElegir.altura }} metros</td>
+                <td>{{ pokemonElegir.peso }} kilogramos</td>
+                <td>
+                    {% if pokemonElegir.debilidades %}
+                        {{ pokemonElegir.debilidades | join(', ') }}
+                    {% else %}
+                        Ninguna
+                    {% endif %}
+                </td>
+                <td>
+                    {% if pokemonElegir.fortalezas %}
+                        {{ pokemonElegir.fortalezas | join(', ') }}
+                    {% else %}
+                        Ninguna
+                    {% endif %}
+                </td>
+                <td>
+                    {% if pokemonElegir.inmunidades %}
+                        {{ pokemonElegir.inmunidades | join(', ') }}
+                    {% else %}
+                        Ninguna
+                    {% endif %}
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="9">No se encontró el Pokémon. Intenta de nuevo.</td>
+            </tr>
+        {% endif %}
+    </tbody>
+</table>
